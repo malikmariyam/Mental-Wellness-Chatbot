@@ -9,7 +9,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
 
 # Set your NVIDIA API key
-os.environ["NVIDIA_API_KEY"] = "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"
+os.environ["NVIDIA_API_KEY"] = ""
 
 # Initialize the model
 llm = ChatNVIDIA(model="meta/llama-3.1-8b-instruct")
@@ -101,3 +101,4 @@ for msg in active_memory.chat_memory.messages:
         if msg.content != last_displayed["ai"]:
             st.chat_message("assistant").write(msg.content)
             last_displayed["ai"] = msg.content
+
